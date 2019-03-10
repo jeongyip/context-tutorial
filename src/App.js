@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import ColorBox from './components/ColorBox'
+import SetColors from './components/SetColors'
+import { ColorProvider } from './contexts/color';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <ColorBox />
-      </div>
+      <ColorProvider>
+        <div>
+          <SetColors />
+          <ColorBox />
+        </div>
+      </ColorProvider>
     );
   }
 }
